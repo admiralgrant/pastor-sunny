@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You, Pastor Sunny</title>
+<meta name="description" content="A letter of gratitude to Pastor Sunny, who shared his experience and lit a fire at Joy Center Youth Alive.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #faf5ec;
+    --ink: #33241f;
+    --ink-soft: #6b584e;
+    --rose: #b0435e;
+    --rose-soft: #c97a8e;
+    --gold: #b98d3f;
+    --rule: rgba(107, 88, 78, 0.28);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "EB Garamond", Georgia, serif;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    text-wrap: pretty;
+    min-height: 100vh;
+  }
+
+  /* ---- hero ---- */
+  .hero {
+    position: relative;
+    height: min(62vh, 44rem);
+    min-height: 22rem;
+    overflow: hidden;
+  }
+  .hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 50%;
+    filter: saturate(1.02) brightness(0.98);
+    transform: scale(1.06);
+    animation: hero-settle 2.4s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  }
+  @keyframes hero-settle { to { transform: scale(1); } }
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(51,36,31,0.22), rgba(51,36,31,0.05) 45%, rgba(250,245,236,0) 72%, var(--paper) 100%);
+    pointer-events: none;
+  }
+  .hero-title {
+    position: absolute;
+    left: 50%;
+    bottom: clamp(1.5rem, 5vh, 3.5rem);
+    transform: translateX(-50%);
+    z-index: 2;
+    text-align: center;
+    width: min(92%, 46rem);
+  }
+  .hero-title .eyebrow {
+    color: #f7e8d8;
+    text-shadow: 0 1px 14px rgba(51,36,31,0.5);
+  }
+  .hero-title h1 {
+    color: #fff8ef;
+    text-shadow: 0 2px 26px rgba(51,36,31,0.6);
+    margin-bottom: 0.25rem;
+  }
+
+  /* ---- letter body ---- */
+  main {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: clamp(3rem, 8vw, 5.5rem) clamp(1.5rem, 6vw, 3.5rem) 3rem;
+    text-align: center;
+  }
+
+  .eyebrow {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: var(--rose);
+    margin-bottom: 2rem;
+  }
+
+  h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(2.5rem, 7vw, 4.2rem);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin-bottom: 2.4rem;
+  }
+
+  h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 500;
+    font-size: 1.9rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .ornament {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    color: var(--gold);
+    margin: 0 auto 2.4rem;
+    font-size: 1rem;
+  }
+  .ornament::before, .ornament::after {
+    content: "";
+    height: 1px;
+    width: min(9rem, 24vw);
+    background: var(--rule);
+  }
+
+  .wish {
+    font-size: clamp(1.18rem, 2.6vw, 1.4rem);
+    color: var(--ink);
+    margin-bottom: 3.25rem;
+  }
+  .wish p { margin-bottom: 1.5rem; }
+  .wish strong { font-weight: 500; }
+
+  /* ---- arch-framed portrait ---- */
+  .portrait {
+    width: min(19rem, 72vw);
+    margin: 0 auto 3.25rem;
+    border-radius: 50% 50% 0.5rem 0.5rem / 34% 34% 0.5rem 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 18px 45px -18px rgba(51,36,31,0.35);
+    border: 1px solid rgba(107,88,78,0.18);
+    aspect-ratio: 4 / 5;
+  }
+  .portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .verse {
+    position: relative;
+    padding: 2.75rem 2rem;
+    margin-bottom: 3.5rem;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .verse .quote-mark {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 5rem;
+    line-height: 0.6;
+    color: var(--rose-soft);
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+  .verse blockquote {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(1.5rem, 3.2vw, 1.95rem);
+    line-height: 1.45;
+    font-weight: 500;
+    font-style: italic;
+  }
+  .verse cite {
+    display: block;
+    margin-top: 1.4rem;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-style: normal;
+    font-size: 0.85rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  /* ---- full-width image band ---- */
+  .band {
+    width: 100%;
+    height: clamp(14rem, 38vw, 26rem);
+    overflow: hidden;
+    position: relative;
+  }
+  .band img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 62%;
+  }
+  .band::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(51,36,31,0.38), rgba(51,36,31,0.06) 42%, transparent 62%);
+    pointer-events: none;
+  }
+  .band-caption {
+    position: absolute;
+    left: 50%;
+    bottom: 1.4rem;
+    transform: translateX(-50%);
+    z-index: 1;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-style: italic;
+    font-size: clamp(1rem, 2.4vw, 1.3rem);
+    color: #fff8ef;
+    text-shadow: 0 1px 16px rgba(51,36,31,0.6);
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+  }
+
+  .prayer {
+    font-size: clamp(1.12rem, 2.3vw, 1.28rem);
+    margin-bottom: 3rem;
+  }
+  .prayer p { margin-bottom: 1.4rem; }
+
+  .amen {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--rose);
+    margin-bottom: 3.25rem;
+  }
+
+  .signoff { font-size: 1.05rem; color: var(--ink-soft); margin-bottom: 0.5rem; }
+  .signoff-name {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.35rem;
+    font-style: italic;
+    margin-bottom: 3.25rem;
+  }
+
+  footer {
+    text-align: center;
+    padding: 0 1.5rem 3rem;
+    font-size: 0.95rem;
+    font-style: italic;
+    color: var(--ink-soft);
+  }
+  footer span { display: inline-block; margin: 0 0.6rem; color: var(--gold); }
+
+  /* ---- gentle staggered entrance ---- */
+  .fade {
+    opacity: 0;
+    transform: translateY(14px);
+    animation: rise 1.1s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  }
+  .d1 { animation-delay: 0.1s; }
+  .d2 { animation-delay: 0.3s; }
+  .d3 { animation-delay: 0.5s; }
+  .d4 { animation-delay: 0.75s; }
+  .d5 { animation-delay: 1s; }
+  .d6 { animation-delay: 1.25s; }
+  @keyframes rise { to { opacity: 1; transform: translateY(0); } }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fade { opacity: 1; transform: none; animation: none; }
+    .hero img { transform: none; animation: none; }
+    html { scroll-behavior: auto; }
+  }
+
+  @media (max-width: 34rem) {
+    .verse { padding: 2rem 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+  <section class="hero">
+    <img src="images/hero.jpg" alt="A speaker sharing from the stage with a microphone" fetchpriority="high">
+    <div class="hero-title">
+      <p class="eyebrow fade d1">For a Man of Testimony</p>
+      <h1 class="fade d2">Thank You, Pastor Sunny</h1>
+    </div>
+  </section>
+
+  <main>
+    <div class="ornament fade d3" aria-hidden="true">&#10022;</div>
+
+    <div class="wish fade d3">
+      <p>
+        There are stories, and then there are <strong>testimonies</strong>
+        &mdash; and yours, Pastor Sunny, came to us as the second kind.
+        You did not just share an experience; you shared your scars and
+        your victories, and we saw God&rsquo;s fingerprints all over both.
+      </p>
+      <p>
+        Thank you for your honesty and your courage. The moment you opened
+        up, walls came down in every heart listening. Your story lit our
+        faith &mdash; and that is the power of a testimony freely shared.
+      </p>
+    </div>
+
+    <figure class="portrait fade d4">
+      <img src="images/portrait.jpg" alt="A speaker with a microphone at a warm evening event" loading="lazy">
+    </figure>
+
+    <section class="verse fade d4">
+      <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+      <blockquote>
+        They triumphed over him by the blood of the Lamb
+        and by the word of their testimony.
+      </blockquote>
+      <cite>Revelation 12:11 &middot; NIV</cite>
+    </section>
+  </main>
+
+  <section class="band" aria-label="Hands raised in worship">
+    <img src="images/band.jpg" alt="A speaker before an audience of lit phones" loading="lazy">
+    <p class="band-caption">Your story lit our faith</p>
+  </section>
+
+  <main>
+    <h2 class="fade d5">A Prayer Over You</h2>
+
+    <div class="prayer fade d5">
+      <p>
+        Father, bless Your servant Sunny richly. Let the testimony he
+        carries keep bearing fruit in every place he shares it. Give him
+        more victories to declare, more grace for the journey, and a
+        harvest of hearts that find courage in his story.
+      </p>
+      <p>
+        May he be hidden in You, and may You be glorified through him &mdash;
+        now and always.
+      </p>
+    </div>
+
+    <p class="amen fade d6">Amen</p>
+
+    <p class="signoff fade d6">With deep appreciation,</p>
+    <p class="signoff-name fade d6">&#10022;</p>
+  </main>
+
+  <footer class="fade d6">
+    &ldquo;Come and hear, all you who fear God;
+    let me tell you what he has done for me.&rdquo;
+    <span aria-hidden="true">&#10022;</span>
+    Psalm 66:16
+  </footer>
+
+</body>
+</html>
